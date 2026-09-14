@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|c:\\users\\lenonsilva\\source\\repos\\acervo\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|c:\\users\\lenonsilva\\source\\repos\\acervo\\models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,22 +32,9 @@
               "RelativeDocumentMoniker": "Controllers\\LivrosController.cs",
               "ToolTip": "C:\\Users\\lenonsilva\\source\\repos\\Acervo\\Controllers\\LivrosController.cs",
               "RelativeToolTip": "Controllers\\LivrosController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAuwFsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwFEAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T23:20:23.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Livro.cs",
-              "DocumentMoniker": "C:\\Users\\lenonsilva\\source\\repos\\Acervo\\Models\\Livro.cs",
-              "RelativeDocumentMoniker": "Models\\Livro.cs",
-              "ToolTip": "C:\\Users\\lenonsilva\\source\\repos\\Acervo\\Models\\Livro.cs",
-              "RelativeToolTip": "Models\\Livro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T23:15:15.383Z",
+              "WhenOpened": "2026-09-04T00:14:47.968Z",
               "EditorCaption": ""
             }
           ]

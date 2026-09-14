@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Acervo.Controllers.LivrosController",
-    "Method": "Get",
+    "Method": "Listar",
     "RelativePath": "api/Livros",
     "HttpMethod": "GET",
     "IsController": true,
@@ -43,14 +43,35 @@
   },
   {
     "ContainingType": "Acervo.Controllers.LivrosController",
-    "Method": "GetByAnoPublicacao",
-    "RelativePath": "api/Livros/ano/{ano}",
-    "HttpMethod": "GET",
+    "Method": "Alterar",
+    "RelativePath": "api/Livros/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ano",
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "livroAtualizado",
+        "Type": "Acervo.Models.Livro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Acervo.Controllers.LivrosController",
+    "Method": "Excluir",
+    "RelativePath": "api/Livros/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
