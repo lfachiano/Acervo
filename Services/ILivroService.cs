@@ -4,7 +4,7 @@ namespace Acervo.Services
 {
     public interface ILivroService
     {
-        Task<List<LivroResponseDTO>> ListarAsync();
+        Task<List<LivroResponseDTO>> ListarAsync(LivroFilterDTO filtro);
         Task<LivroResponseDTO?> BuscarPorIdAsync(int id);
         Task<LivroResponseDTO> CadastrarAsync(LivroCreateDTO dto);
         Task<LivroResponseDTO?> AlterarAsync(

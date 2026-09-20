@@ -10,6 +10,46 @@
         "tags": [
           "Livros"
         ],
+        "parameters": [
+          {
+            "name": "Titulo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AnoPublicacao",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "AnoInicio",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "AnoFim",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenarPor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -24,17 +64,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Livro"
+                "$ref": "#/components/schemas/LivroCreateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Livro"
+                "$ref": "#/components/schemas/LivroCreateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Livro"
+                "$ref": "#/components/schemas/LivroCreateDTO"
               }
             }
           }
@@ -87,17 +127,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Livro"
+                "$ref": "#/components/schemas/LivroUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Livro"
+                "$ref": "#/components/schemas/LivroUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Livro"
+                "$ref": "#/components/schemas/LivroUpdateDTO"
               }
             }
           }
@@ -133,13 +173,27 @@
   },
   "components": {
     "schemas": {
-      "Livro": {
+      "LivroCreateDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "titulo": {
+            "type": "string",
+            "nullable": true
+          },
+          "autor": {
+            "type": "string",
+            "nullable": true
+          },
+          "anoPublicacao": {
             "type": "integer",
             "format": "int32"
-          },
+          }
+        },
+        "additionalProperties": false
+      },
+      "LivroUpdateDTO": {
+        "type": "object",
+        "properties": {
           "titulo": {
             "type": "string",
             "nullable": true

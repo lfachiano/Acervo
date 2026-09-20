@@ -6,7 +6,33 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "Titulo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnoPublicacao",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnoInicio",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnoFim",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenarPor",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -19,7 +45,7 @@
     "Parameters": [
       {
         "Name": "livro",
-        "Type": "Acervo.Models.Livro",
+        "Type": "Acervo.DTOS.Livro.LivroCreateDTO",
         "IsRequired": true
       }
     ],
@@ -56,7 +82,7 @@
       },
       {
         "Name": "livroAtualizado",
-        "Type": "Acervo.Models.Livro",
+        "Type": "Acervo.DTOS.Livro.LivroUpdateDTO",
         "IsRequired": true
       }
     ],

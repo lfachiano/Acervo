@@ -18,10 +18,10 @@ namespace Acervo.Controllers
         public LivrosController (ILivroService service) => _service = service;       
 
         [HttpGet]
-        public async Task<IActionResult> Listar()
+        public async Task<IActionResult> Listar([FromQuery] LivroFilterDTO filtro)
         {
 
-            var livros = await _service.ListarAsync();
+            var livros = await _service.ListarAsync(filtro);
 
             return Ok(livros);
         }
