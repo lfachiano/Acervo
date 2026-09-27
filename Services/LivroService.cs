@@ -14,84 +14,34 @@ namespace Acervo.Services
 
         public async Task<List<LivroResponseDTO>> ListarAsync(LivroFilterDTO filtro)
         {
-            /**
-             * Adicionamos a consulta inicial para buscar todos os livros
-             * A partir daqui serão adiocionadas as condições de filtro, caso existam
-             */
+
             var query = _context.Livros.AsQueryable();
 
-            /**
-             * Verifica se o filtro de título foi fornecido e, se sim, aplicamos a condição de filtro na consulta
-             * 
-             * Importante notar que foi utilizado o método Contains para realizar uma busca parcial no título do livro, ou seja,
-             * caso qualquer parte do título do livro contenha o valor fornecido no filtro, ele será incluído na lista de resultados
-             * 
-             * Para uma busca específica, você poderia utilizar o operador de igualdade (==) em vez do método Contains, 
-             * mas isso limitaria os resultados apenas aos livros cujo título seja exatamente igual ao valor fornecido no filtro
-            */
-            if (!string.IsNullOrEmpty(filtro.Titulo))
+            if(!string.IsNullOrWhiteSpace(filtro.Titulo))
             {
-                query = query.Where(l => l.Titulo.Contains(filtro.Titulo));
+                query = query.Where(
+                    l => l.Titulo.Contains(filtro.Titulo)
+                    );
             }
 
-            /**
-             * Verifica se o filtro de ano de publicação foi fornecido e, se sim, aplicamos a condição de filtro na consulta
-             */
-            if (filtro.AnoPublicacao.HasValue)
-            {
-                query = query.Where(l => l.AnoPublicacao == filtro.AnoPublicacao.Value);
-            }
-
-            /**
-             * Verifica se o filtro de ano de início foi fornecido e, se sim, aplicamos a condição de filtro na consulta
-             * 
-             * Aqui estamos utilizando o operador >= para buscar livros publicados a partir do ano fornecido no filtro
-             */
             if (filtro.AnoInicio.HasValue)
             {
-                query = query.Where(l => l.AnoPublicacao >= filtro.AnoInicio.Value);
+                query = query.Where(
+                    l => l.AnoPublicacao >= filtro.AnoInicio.Value
+                    );
             }
 
-            /**
-             * Verifica se o filtro de ano de fim foi fornecido e, se sim, aplicamos a condição de filtro na consulta
-             * 
-             * Aqui estamos utilizando o operador <= para buscar livros publicados até o ano fornecido no filtro
-             * Em conjunto com o filtro de ano de início, isso permite buscar livros publicados dentro de um intervalo de anos específico
-             */
             if (filtro.AnoFim.HasValue)
             {
-                query = query.Where(l => l.AnoPublicacao <= filtro.AnoFim.Value);
+                query = query.Where(
+                    l => l.AnoPublicacao <= filtro.AnoFim.Value
+                    );
             }
 
-            /**
-             * Verifica se o filtro de ordenação foi fornecido e, se sim, aplicamos a ordenação na consulta
-             * 
-             * Aqui estamos utilizando um switch para determinar qual propriedade do livro será utilizada para ordenar os resultados
-             * Caso o valor fornecido para OrdenarPor não seja válido, optamos por não aplicar nenhuma ordenação
-             */
-            if (!string.IsNullOrEmpty(filtro.OrdenarPor))
-            {
-                switch (filtro.OrdenarPor.ToLower())
+            return await query
+                .Select(l => new LivroResponseDTO
                 {
-                    case "titulo":
-                        query = query.OrderBy(l => l.Titulo);
-                        break;
-                    case "anopublicacao":
-                        query = query.OrderBy(l => l.AnoPublicacao);
-                        break;
-                    case "autor":
-                        query = query.OrderBy(l => l.Autor);
-                        break;
-                    default:
-                        // Caso o valor fornecido para OrdenarPor não seja válido, podemos optar por não aplicar nenhuma ordenação
-                        break;
-                }
-            }
-
-
-            return await query.Select(l => new LivroResponseDTO
-            {
-                Id = l.Id,
+                    Id = l.Id,
                     Titulo = l.Titulo,
                     Autor = l.Autor,
                     AnoPublicacao = l.AnoPublicacao
@@ -112,6 +62,26 @@ namespace Acervo.Services
         }
         public async Task<LivroResponseDTO> CadastrarAsync(LivroCreateDTO dto)
         {
+
+            /***
+             * Verificar se já existe um livro cadastrado com as informações passadas
+             * Trata-se de uma regra de negócio que deve ser validada no Service
+             * A exceção lançada é tratada pelo controller
+             */
+
+            var existe = await _context.Livros
+            .AnyAsync(l =>
+                l.Titulo == dto.Titulo &&
+                l.Autor == dto.Autor);
+
+            if (existe)
+            {
+                throw new InvalidOperationException(
+                    "Já existe um livro com este título e autor.");
+            }
+
+
+
             var livro = new Livro
             {
                 Titulo = dto.Titulo,

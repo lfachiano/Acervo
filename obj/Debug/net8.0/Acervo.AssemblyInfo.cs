@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Acervo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d99356091034f0b50116ea2aca87252fb17a8370")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3032ee813e94b6650318def7ed9a2d11b7f8c77")]
 [assembly: System.Reflection.AssemblyProductAttribute("Acervo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Acervo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

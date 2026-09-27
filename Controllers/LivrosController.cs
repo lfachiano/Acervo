@@ -1,5 +1,6 @@
 ﻿using Acervo.Data;
 using Acervo.DTOS.Livro;
+using Acervo.DTOS.Validation;
 using Acervo.Models;
 using Acervo.Services;
 using Microsoft.AspNetCore.Http;
@@ -18,7 +19,8 @@ namespace Acervo.Controllers
         public LivrosController (ILivroService service) => _service = service;       
 
         [HttpGet]
-        public async Task<IActionResult> Listar([FromQuery] LivroFilterDTO filtro)
+        public async Task<IActionResult> Listar(
+            [FromQuery] LivroFilterDTO filtro)
         {
 
             var livros = await _service.ListarAsync(filtro);
@@ -34,7 +36,11 @@ namespace Acervo.Controllers
 
             if (livro == null)
             {
-                return NotFound();
+                return NotFound(new ErroResponseDTO
+                {
+                    StatusCode = StatusCodes.Status404NotFound,
+                    Mensagem = "ID não encontrado"
+                });
             }
 
             return Ok(livro);
@@ -45,14 +51,29 @@ namespace Acervo.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] LivroCreateDTO livro)
         {
-            var livroResponseDTO = _service.CadastrarAsync(livro);
-            
-            return CreatedAtAction
-                (
-                    nameof(GetById),
-                    new { id = livroResponseDTO.Id },
-                    livro
-                );
+            try
+            {
+                var livroResponseDTO = await _service.CadastrarAsync(livro);
+
+                return CreatedAtAction
+                    (
+                        nameof(GetById),
+                        new { id = livroResponseDTO.Id },
+                        livroResponseDTO
+                    );
+            }
+            catch (InvalidOperationException ex)
+            {
+                /** Como o problema encontrado seria uma duplicação
+                 *  O retorno mais adequado é o 409 Conflito
+                */
+                return Conflict(new ErroResponseDTO
+                {
+                    StatusCode = StatusCodes.Status409Conflict,
+                    Mensagem = ex.Message,
+                });
+            }
+
         }
 
         [HttpPut("{id}")]

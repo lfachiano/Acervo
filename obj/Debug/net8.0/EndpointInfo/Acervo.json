@@ -19,14 +19,6 @@
             }
           },
           {
-            "name": "AnoPublicacao",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
             "name": "AnoInicio",
             "in": "query",
             "schema": {
@@ -40,13 +32,6 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "OrdenarPor",
-            "in": "query",
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -174,17 +159,23 @@
   "components": {
     "schemas": {
       "LivroCreateDTO": {
+        "required": [
+          "autor",
+          "titulo"
+        ],
         "type": "object",
         "properties": {
           "titulo": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "autor": {
-            "type": "string",
-            "nullable": true
+            "minLength": 2,
+            "type": "string"
           },
           "anoPublicacao": {
+            "maximum": 2500,
+            "minimum": 1,
             "type": "integer",
             "format": "int32"
           }
@@ -199,10 +190,13 @@
             "nullable": true
           },
           "autor": {
+            "minLength": 2,
             "type": "string",
             "nullable": true
           },
           "anoPublicacao": {
+            "maximum": 2500,
+            "minimum": 1,
             "type": "integer",
             "format": "int32"
           }
