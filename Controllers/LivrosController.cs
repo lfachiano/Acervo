@@ -64,12 +64,9 @@ namespace Acervo.Controllers
             }
             catch (InvalidOperationException ex)
             {
-                /** Como o problema encontrado seria uma duplicação
-                 *  O retorno mais adequado é o 409 Conflito
-                */
-                return Conflict(new ErroResponseDTO
+                return BadRequest(new ErroResponseDTO
                 {
-                    StatusCode = StatusCodes.Status409Conflict,
+                    StatusCode = StatusCodes.Status400BadRequest,
                     Mensagem = ex.Message,
                 });
             }
@@ -79,12 +76,29 @@ namespace Acervo.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Alterar(int id, [FromBody] LivroUpdateDTO livroAtualizado)
         {
-            var livro = await _service.AlterarAsync(id, livroAtualizado);
+            try
+            {
+                var livro = await _service.AlterarAsync(id, livroAtualizado);
 
-            if (livro == null)
-                return NotFound();
+                if (livro == null)
+                {
+                    return NotFound(new ErroResponseDTO
+                    {
+                        StatusCode = StatusCodes.Status404NotFound,
+                        Mensagem = "Livro não encontrado"
+                    });
+                }
 
-            return Ok(livro);
+                return Ok(livro);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new ErroResponseDTO
+                {
+                    StatusCode = StatusCodes.Status400BadRequest,
+                    Mensagem = ex.Message,
+                });
+            }
         }
 
 

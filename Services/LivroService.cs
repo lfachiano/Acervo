@@ -1,4 +1,5 @@
 ﻿using Acervo.Data;
+using Acervo.DTOS.Autor;
 using Acervo.DTOS.Livro;
 using Acervo.Models;
 using Microsoft.EntityFrameworkCore;
@@ -43,7 +44,11 @@ namespace Acervo.Services
                 {
                     Id = l.Id,
                     Titulo = l.Titulo,
-                    Autor = l.Autor,
+                    Autor = new AutorDTO
+                    {
+                        Id = l.Autor.Id,
+                        Nome = l.Autor.Nome
+                    },
                     AnoPublicacao = l.AnoPublicacao
                 }).ToListAsync();
         }
@@ -56,12 +61,24 @@ namespace Acervo.Services
                      {
                          Id = l.Id,
                          Titulo = l.Titulo,
-                         Autor = l.Autor,
+                         Autor = new AutorDTO
+                         {
+                             Id = l.Autor.Id,
+                             Nome = l.Autor.Nome
+                         },
                          AnoPublicacao = l.AnoPublicacao
                      }).FirstOrDefaultAsync();
         }
         public async Task<LivroResponseDTO> CadastrarAsync(LivroCreateDTO dto)
         {
+
+            var autorIdExiste = await _context.Autores
+                .AnyAsync(a => a.Id == dto.AutorId);
+
+            if (!autorIdExiste)
+            {
+                throw new InvalidOperationException("Não existe autor com esse ID.");
+            }
 
             /***
              * Verificar se já existe um livro cadastrado com as informações passadas
@@ -72,7 +89,7 @@ namespace Acervo.Services
             var existe = await _context.Livros
             .AnyAsync(l =>
                 l.Titulo == dto.Titulo &&
-                l.Autor == dto.Autor);
+                l.AutorId == dto.AutorId);
 
             if (existe)
             {
@@ -85,7 +102,7 @@ namespace Acervo.Services
             var livro = new Livro
             {
                 Titulo = dto.Titulo,
-                Autor = dto.Autor,
+                AutorId = dto.AutorId,
                 AnoPublicacao = dto.AnoPublicacao
             };
 
@@ -93,13 +110,20 @@ namespace Acervo.Services
 
             await _context.SaveChangesAsync();
 
+            /*
             return new LivroResponseDTO
             {
                 Id = livro.Id,
                 Titulo = livro.Titulo,
-                Autor = livro.Autor,
+                Autor = new AutorDTO
+                {
+                    Id = livro.Autor.Id,
+                    Nome = livro.Autor.Nome
+                },
                 AnoPublicacao = livro.AnoPublicacao
             };
+            */
+            return await BuscarPorIdAsync(livro.Id) ?? throw new InvalidOperationException("Erro ao buscar o livro cadastrado.");
 
         }
 
@@ -110,19 +134,35 @@ namespace Acervo.Services
             if (livro == null)
                 return null;
 
+
+            var autorIdExiste = await _context.Autores
+                .AnyAsync(a => a.Id == dto.AutorId);
+
+            if (!autorIdExiste)
+            {
+                throw new InvalidOperationException("Não existe autor com esse ID.");
+            }
+
+
+            var existe = await _context.Livros
+                .AnyAsync(l =>
+                    l.Titulo == dto.Titulo &&
+                    l.AutorId == dto.AutorId);
+
+            if (existe)
+            {
+                throw new InvalidOperationException(
+                    "Já existe um livro com este título e autor.");
+            }
+
+
             livro.Titulo = dto.Titulo;
-            livro.Autor = dto.Autor;
+            livro.AutorId = dto.AutorId;
             livro.AnoPublicacao = dto.AnoPublicacao;           
 
             await _context.SaveChangesAsync();
 
-            return new LivroResponseDTO
-            {
-                Id = livro.Id,
-                Titulo = livro.Titulo,
-                Autor = livro.Autor,
-                AnoPublicacao = livro.AnoPublicacao
-            };
+            return await BuscarPorIdAsync(livro.Id) ?? throw new InvalidOperationException("Erro ao buscar o livro cadastrado.");
         }
 
         public async Task<bool> ExcluirAsync(int id)

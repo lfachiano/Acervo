@@ -160,7 +160,7 @@
     "schemas": {
       "LivroCreateDTO": {
         "required": [
-          "autor",
+          "autorId",
           "titulo"
         ],
         "type": "object",
@@ -169,9 +169,9 @@
             "minLength": 1,
             "type": "string"
           },
-          "autor": {
-            "minLength": 2,
-            "type": "string"
+          "autorId": {
+            "type": "integer",
+            "format": "int32"
           },
           "anoPublicacao": {
             "maximum": 2500,
@@ -189,10 +189,9 @@
             "type": "string",
             "nullable": true
           },
-          "autor": {
-            "minLength": 2,
-            "type": "string",
-            "nullable": true
+          "autorId": {
+            "type": "integer",
+            "format": "int32"
           },
           "anoPublicacao": {
             "maximum": 2500,
