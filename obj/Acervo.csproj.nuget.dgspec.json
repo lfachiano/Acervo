@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Lenon\\source\\repos\\Acervo\\Acervo.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Acervo.csproj",
         "packagesPath": "C:\\Users\\Lenon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Lenon\\source\\repos\\Acervo\\obj\\",
+=======
+    "D:\\dev\\Git\\Acervo\\Acervo.csproj": {}
+  },
+  "projects": {
+    "D:\\dev\\Git\\Acervo\\Acervo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\dev\\Git\\Acervo\\Acervo.csproj",
+        "projectName": "Acervo",
+        "projectPath": "D:\\dev\\Git\\Acervo\\Acervo.csproj",
+        "packagesPath": "C:\\Users\\lenon\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\Git\\Acervo\\obj\\",
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Lenon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\lenon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +44,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,6 +102,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

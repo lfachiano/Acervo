@@ -1,6 +1,9 @@
 ﻿using Acervo.Data;
 using Acervo.DTOS.Autor;
+<<<<<<< HEAD
 using Acervo.DTOS.Categoria;
+=======
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
 using Acervo.DTOS.Livro;
 using Acervo.Models;
 using Microsoft.EntityFrameworkCore;
@@ -40,6 +43,7 @@ namespace Acervo.Services
                     );
             }
 
+<<<<<<< HEAD
             if (!string.IsNullOrWhiteSpace(filtro.Autor))
             {
                 query = query.Where(
@@ -81,6 +85,8 @@ namespace Acervo.Services
                 }
             }
 
+=======
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
             return await query
                 .Select(l => new LivroResponseDTO
                 {
@@ -91,12 +97,16 @@ namespace Acervo.Services
                         Id = l.Autor.Id,
                         Nome = l.Autor.Nome
                     },
+<<<<<<< HEAD
                     AnoPublicacao = l.AnoPublicacao,
                     Categorias = l.Categorias
                         .Select(c => new CategoriaDTO {
                             Id = c.Id,
                             Nome = c.Nome
                         }).ToList()
+=======
+                    AnoPublicacao = l.AnoPublicacao
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
                 }).ToListAsync();
         }
 
@@ -113,6 +123,7 @@ namespace Acervo.Services
                              Id = l.Autor.Id,
                              Nome = l.Autor.Nome
                          },
+<<<<<<< HEAD
                          AnoPublicacao = l.AnoPublicacao,
                          Categorias = l.Categorias
                             .Select(c => new CategoriaDTO
@@ -120,6 +131,9 @@ namespace Acervo.Services
                                 Id = c.Id,
                                 Nome = c.Nome
                             }).ToList(),
+=======
+                         AnoPublicacao = l.AnoPublicacao
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
                      }).FirstOrDefaultAsync();
         }
         public async Task<LivroResponseDTO> CadastrarAsync(LivroCreateDTO dto)
@@ -150,6 +164,7 @@ namespace Acervo.Services
                     "Já existe um livro com este título e autor.");
             }
 
+<<<<<<< HEAD
             var categoriasIds = dto.CategoriaIds?
                 .Distinct()
                 .ToList()
@@ -163,14 +178,20 @@ namespace Acervo.Services
             {
                 throw new ArgumentException("Ao menos uma Categoria não existe.");
             }
+=======
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
 
 
             var livro = new Livro
             {
                 Titulo = dto.Titulo,
                 AutorId = dto.AutorId,
+<<<<<<< HEAD
                 AnoPublicacao = dto.AnoPublicacao,
                 Categorias = categorias
+=======
+                AnoPublicacao = dto.AnoPublicacao
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
             };
 
             _context.Livros.Add(livro);
@@ -196,10 +217,14 @@ namespace Acervo.Services
 
         public async Task<LivroResponseDTO?> AlterarAsync(int id, LivroUpdateDTO dto)
         {
+<<<<<<< HEAD
             //var livro = await _context.Livros.FindAsync(id);
             var livro = await _context.Livros
                 .Include(l => l.Categorias)
                 .FirstOrDefaultAsync(l => l.Id == id);
+=======
+            var livro = await _context.Livros.FindAsync(id);
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
 
             if (livro == null)
                 return null;
@@ -213,7 +238,11 @@ namespace Acervo.Services
                 throw new InvalidOperationException("Não existe autor com esse ID.");
             }
 
+<<<<<<< HEAD
             /*
+=======
+
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
             var existe = await _context.Livros
                 .AnyAsync(l =>
                     l.Titulo == dto.Titulo &&
@@ -224,6 +253,7 @@ namespace Acervo.Services
                 throw new InvalidOperationException(
                     "Já existe um livro com este título e autor.");
             }
+<<<<<<< HEAD
             */
 
             var categoriasIds = dto.CategoriaIds?
@@ -239,12 +269,18 @@ namespace Acervo.Services
             {
                 throw new ArgumentException("Ao menos uma Categoria não existe.");
             }
+=======
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
 
 
             livro.Titulo = dto.Titulo;
             livro.AutorId = dto.AutorId;
+<<<<<<< HEAD
             livro.AnoPublicacao = dto.AnoPublicacao; 
             livro.Categorias = categorias;
+=======
+            livro.AnoPublicacao = dto.AnoPublicacao;           
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
 
             await _context.SaveChangesAsync();
 

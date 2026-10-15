@@ -292,6 +292,7 @@ D:\dev\Git\Acervo\obj\Debug\net8.0\refint\Acervo.dll
 D:\dev\Git\Acervo\obj\Debug\net8.0\Acervo.pdb
 D:\dev\Git\Acervo\obj\Debug\net8.0\Acervo.genruntimeconfig.cache
 D:\dev\Git\Acervo\obj\Debug\net8.0\ref\Acervo.dll
+<<<<<<< HEAD
 C:\Users\lenonsilva\Downloads\Acervo-main\Acervo-main\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\lenonsilva\Downloads\Acervo-main\Acervo-main\bin\Debug\net8.0\appsettings.json
 C:\Users\lenonsilva\Downloads\Acervo-main\Acervo-main\bin\Debug\net8.0\Acervo.staticwebassets.endpoints.json
@@ -586,3 +587,5 @@ C:\Users\Lenon\source\repos\Acervo\obj\Debug\net8.0\refint\Acervo.dll
 C:\Users\Lenon\source\repos\Acervo\obj\Debug\net8.0\Acervo.pdb
 C:\Users\Lenon\source\repos\Acervo\obj\Debug\net8.0\Acervo.genruntimeconfig.cache
 C:\Users\Lenon\source\repos\Acervo\obj\Debug\net8.0\ref\Acervo.dll
+=======
+>>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
