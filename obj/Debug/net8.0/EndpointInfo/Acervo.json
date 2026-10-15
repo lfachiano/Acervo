@@ -33,7 +33,6 @@
               "type": "integer",
               "format": "int32"
             }
-<<<<<<< HEAD
           },
           {
             "name": "AutorId",
@@ -64,8 +63,6 @@
             "schema": {
               "type": "string"
             }
-=======
->>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
           }
         ],
         "responses": {
@@ -211,7 +208,6 @@
             "minimum": 1,
             "type": "integer",
             "format": "int32"
-<<<<<<< HEAD
           },
           "categoriaIds": {
             "type": "array",
@@ -220,8 +216,6 @@
               "format": "int32"
             },
             "nullable": true
-=======
->>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
           }
         },
         "additionalProperties": false
@@ -234,15 +228,6 @@
             "nullable": true
           },
           "autorId": {
-<<<<<<< HEAD
-=======
-            "type": "integer",
-            "format": "int32"
-          },
-          "anoPublicacao": {
-            "maximum": 2500,
-            "minimum": 1,
->>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
             "type": "integer",
             "format": "int32"
           },

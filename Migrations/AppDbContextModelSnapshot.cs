@@ -21,7 +21,6 @@ namespace Acervo.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-<<<<<<< HEAD
             modelBuilder.Entity("Acervo.Models.Autor", b =>
                 {
                     b.Property<int>("Id")
@@ -56,8 +55,6 @@ namespace Acervo.Migrations
                     b.ToTable("Categorias");
                 });
 
-=======
->>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
             modelBuilder.Entity("Acervo.Models.Livro", b =>
                 {
                     b.Property<int>("Id")
@@ -69,14 +66,8 @@ namespace Acervo.Migrations
                     b.Property<int>("AnoPublicacao")
                         .HasColumnType("int");
 
-<<<<<<< HEAD
                     b.Property<int>("AutorId")
                         .HasColumnType("int");
-=======
-                    b.Property<string>("Autor")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
->>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
 
                     b.Property<string>("Titulo")
                         .IsRequired()
@@ -84,7 +75,6 @@ namespace Acervo.Migrations
 
                     b.HasKey("Id");
 
-<<<<<<< HEAD
                     b.HasIndex("AutorId");
 
                     b.ToTable("Livros");
@@ -135,10 +125,6 @@ namespace Acervo.Migrations
                 {
                     b.Navigation("Livros");
                 });
-=======
-                    b.ToTable("Livros");
-                });
->>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
 #pragma warning restore 612, 618
         }
     }

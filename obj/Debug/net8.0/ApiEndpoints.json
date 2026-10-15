@@ -21,7 +21,6 @@
         "Name": "AnoFim",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
-<<<<<<< HEAD
       },
       {
         "Name": "AutorId",
@@ -42,8 +41,6 @@
         "Name": "OrdenarPor",
         "Type": "System.String",
         "IsRequired": false
-=======
->>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
       }
     ],
     "ReturnTypes": []

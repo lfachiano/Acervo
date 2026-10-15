@@ -7,9 +7,6 @@
         public int AnoPublicacao { get; set; }
         public int AutorId { get; set; }
         public Autor Autor { get; set; } = null!;
-<<<<<<< HEAD
         public ICollection<Categoria> Categorias { get; set; } = null!;
-=======
->>>>>>> 4ab22e388cff521e3931eba276f896d57250ee06
     }
 }
