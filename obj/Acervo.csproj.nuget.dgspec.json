@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenon\\Downloads\\Acervo-main\\Acervo.csproj": {}
+    "C:\\Users\\Lenon\\source\\repos\\Acervo\\Acervo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenon\\Downloads\\Acervo-main\\Acervo.csproj": {
+    "C:\\Users\\Lenon\\source\\repos\\Acervo\\Acervo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenon\\Downloads\\Acervo-main\\Acervo.csproj",
+        "projectUniqueName": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Acervo.csproj",
         "projectName": "Acervo",
-        "projectPath": "C:\\Users\\Lenon\\Downloads\\Acervo-main\\Acervo.csproj",
+        "projectPath": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Acervo.csproj",
         "packagesPath": "C:\\Users\\Lenon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenon\\Downloads\\Acervo-main\\obj\\",
+        "outputPath": "C:\\Users\\Lenon\\source\\repos\\Acervo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

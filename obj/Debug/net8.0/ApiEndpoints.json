@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Acervo.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Acervo.DTOS.Auth.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Acervo.Controllers.LivrosController",
     "Method": "Listar",
     "RelativePath": "api/Livros",
