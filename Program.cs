@@ -59,9 +59,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 
 //Adiciona o Service ao Conteiner de Injeção
-builder.Services.AddScoped<
-    ILivroService, 
-    LivroService>();
+builder.Services.AddScoped<ILivroService,LivroService>();
+builder.Services.AddScoped<IAutorService,AutorService>();
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 
 
 var app = builder.Build();

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System.ComponentModel.DataAnnotations;
 
 namespace Acervo.DTOS.Auth
 {
@@ -7,8 +8,7 @@ namespace Acervo.DTOS.Auth
         [Required]
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
-
         [Required]
-        public string Senha { get; set; } = string.Empty;
+        public string Senha {  get; set; } = string.Empty;
     }
 }

@@ -8,25 +8,25 @@ namespace Acervo.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        [HttpPost("login")]
+        [HttpPost]
         public IActionResult Login(LoginDTO dto)
         {
             if (
-                dto.Email == "admin@acervo.com" &&
-                dto.Senha == "123456"
+                dto.Email == "admin@outromail.com"
+                && dto.Senha == "abc123"
             )
             {
-                return Ok(
-                    "Credenciais válidas. Na próxima etapa será gerado o JWT."
-                );
+                //Após validar credenciais,
+                //deve ser gerado o Token
+                return Ok("Credenciais válidas.");
+
             }
 
             return Unauthorized(
-                new
-                {
-                    mensagem = "Credenciais inválidas."
-                }
-            );
+                new { 
+                    mensagem = "Credenciais inválidas" 
+                });
         }
+
     }
 }
