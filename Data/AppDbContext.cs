@@ -12,6 +12,10 @@ namespace Acervo.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Usuario>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+
             modelBuilder.Entity<Livro>()
                 .HasOne(l => l.Autor)
                 .WithMany(a => a.Livros)

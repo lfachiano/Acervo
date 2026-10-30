@@ -2,7 +2,9 @@
 using Acervo.DTOS.Livro;
 using Acervo.DTOS.Validation;
 using Acervo.Models;
+using Acervo.Security;
 using Acervo.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +13,7 @@ using System.Net;
 namespace Acervo.Controllers
 {
     [Route("api/[controller]")]
+    
     [ApiController]
     public class LivrosController : ControllerBase
     {
@@ -19,6 +22,7 @@ namespace Acervo.Controllers
         public LivrosController (ILivroService service) => _service = service;       
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> Listar(
             [FromQuery] LivroFilterDTO filtro)
         {
@@ -30,6 +34,7 @@ namespace Acervo.Controllers
 
 
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
         {
             var livro = await _service.BuscarPorIdAsync(id);
@@ -49,6 +54,7 @@ namespace Acervo.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Post([FromBody] LivroCreateDTO livro)
         {
             try
@@ -103,6 +109,7 @@ namespace Acervo.Controllers
 
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = Perfis.Administrador)]
         public async Task<IActionResult> Excluir(int id)
         {
             var livro = await _service.ExcluirAsync(id);

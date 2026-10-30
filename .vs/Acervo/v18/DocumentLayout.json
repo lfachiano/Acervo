@@ -1,17 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenon\\source\\repos\\Acervo\\",
+  "WorkspaceRootPath": "D:\\dev\\Git\\Acervo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|c:\\users\\lenon\\source\\repos\\acervo\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|d:\\dev\\git\\acervo\\migrations\\20261030191451_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:migrations\\20261030191451_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|d:\\dev\\git\\acervo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|d:\\dev\\git\\acervo\\dtos\\auth\\tokenresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:dtos\\auth\\tokenresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|d:\\dev\\git\\acervo\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|d:\\dev\\git\\acervo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|d:\\dev\\git\\acervo\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|c:\\users\\lenon\\source\\repos\\acervo\\services\\autorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|d:\\dev\\git\\acervo\\services\\autorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:services\\autorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|c:\\users\\lenon\\source\\repos\\acervo\\services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|d:\\dev\\git\\acervo\\services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{385DECE5-39DE-4A5A-90A5-59568BD16FE0}|Acervo.csproj|solutionrelative:services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,11 +42,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
@@ -38,39 +62,102 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LivroService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Services\\LivroService.cs",
-              "RelativeDocumentMoniker": "Services\\LivroService.cs",
-              "ToolTip": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Services\\LivroService.cs",
-              "RelativeToolTip": "Services\\LivroService.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20261030191451_final.cs",
+              "DocumentMoniker": "D:\\dev\\Git\\Acervo\\Migrations\\20261030191451_final.cs",
+              "RelativeDocumentMoniker": "Migrations\\20261030191451_final.cs",
+              "ToolTip": "D:\\dev\\Git\\Acervo\\Migrations\\20261030191451_final.cs",
+              "RelativeToolTip": "Migrations\\20261030191451_final.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T18:58:44.056Z",
+              "WhenOpened": "2026-10-30T19:14:52.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AutorService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Services\\AutorService.cs",
-              "RelativeDocumentMoniker": "Services\\AutorService.cs",
-              "ToolTip": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Services\\AutorService.cs",
-              "RelativeToolTip": "Services\\AutorService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAIwD8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T18:54:08.529Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\dev\\Git\\Acervo\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\dev\\Git\\Acervo\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-30T19:06:12.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "TokenResponseDTO.cs",
+              "DocumentMoniker": "D:\\dev\\Git\\Acervo\\DTOS\\Auth\\TokenResponseDTO.cs",
+              "RelativeDocumentMoniker": "DTOS\\Auth\\TokenResponseDTO.cs",
+              "ToolTip": "D:\\dev\\Git\\Acervo\\DTOS\\Auth\\TokenResponseDTO.cs",
+              "RelativeToolTip": "DTOS\\Auth\\TokenResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T19:01:41.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\dev\\Git\\Acervo\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Services\\TokenService.cs",
+              "ToolTip": "D:\\dev\\Git\\Acervo\\Services\\TokenService.cs",
+              "RelativeToolTip": "Services\\TokenService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAlwDwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T19:01:29.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\dev\\Git\\Acervo\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\dev\\Git\\Acervo\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T18:59:59.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LivroService.cs",
+              "DocumentMoniker": "D:\\dev\\Git\\Acervo\\Services\\LivroService.cs",
+              "RelativeDocumentMoniker": "Services\\LivroService.cs",
+              "ToolTip": "D:\\dev\\Git\\Acervo\\Services\\LivroService.cs",
+              "RelativeToolTip": "Services\\LivroService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T18:58:44.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AutorService.cs",
+              "DocumentMoniker": "D:\\dev\\Git\\Acervo\\Services\\AutorService.cs",
+              "RelativeDocumentMoniker": "Services\\AutorService.cs",
+              "ToolTip": "D:\\dev\\Git\\Acervo\\Services\\AutorService.cs",
+              "RelativeToolTip": "Services\\AutorService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T18:54:08.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AutorController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Controllers\\AutorController.cs",
+              "DocumentMoniker": "D:\\dev\\Git\\Acervo\\Controllers\\AutorController.cs",
               "RelativeDocumentMoniker": "Controllers\\AutorController.cs",
-              "ToolTip": "C:\\Users\\Lenon\\source\\repos\\Acervo\\Controllers\\AutorController.cs",
+              "ToolTip": "D:\\dev\\Git\\Acervo\\Controllers\\AutorController.cs",
               "RelativeToolTip": "Controllers\\AutorController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAEwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAEwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-20T18:52:43.433Z",
               "EditorCaption": ""
