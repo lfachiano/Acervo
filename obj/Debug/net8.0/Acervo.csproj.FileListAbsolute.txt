@@ -733,3 +733,4 @@ C:\Users\Lenon\source\repos\Acervo\obj\Debug\net8.0\refint\Acervo.dll
 C:\Users\Lenon\source\repos\Acervo\obj\Debug\net8.0\Acervo.pdb
 C:\Users\Lenon\source\repos\Acervo\obj\Debug\net8.0\Acervo.genruntimeconfig.cache
 C:\Users\Lenon\source\repos\Acervo\obj\Debug\net8.0\ref\Acervo.dll
+C:\Users\Lenon\source\repos\Acervo\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
